@@ -1,0 +1,189 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* start nav-bar  */
+.navbar {
+  background-color: var(--dark-color);
+  border-bottom: 1px solid var(--green-color);
+}
+.navbar .nav-item .nav-link {
+  color: #fff;
+}
+.navbar .nav-item .nav-link.active,
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link:focus {
+  color: var(--green-color);
+}
+#main .search {
+  color: var(--green-color);
+  border-left: 1px solid var(--green-color);
+  cursor: pointer;
+}
+.main-btn {
+  background-color: var(--green-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+.navbar .navbar-toggler {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 8px 15px;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color);
+}
+/* end nav-bar  */
+/* start landing  */
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 73px);
+}
+/* end landing  */
+/* start main-title */
+.main-title::before {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* end main-title */
+/* start festure */
+.feature .icon-holder {
+  height: 200px;
+}
+.feature .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.feature .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.feature .icon {
+  color: var(--green-color);
+}
+.feature h4 {
+  color: var(--yellow-color);
+}
+/* end festure */
+/* start our-work*/
+.our-work {
+  background-color: var(--section-color);
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.our-work ul li:not(.active):hover {
+  color: var(--green-color);
+}
+.our-work ul li.active {
+  background-color: var(--green-color);
+  color: var(--yellow-color);
+}
+.our-work .box {
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #33d1cca3;
+  font-size: 1rem;
+  color: white;
+  transition: 0.3s;
+  transform: translateX(calc(-100% - 5px));
+  cursor: pointer;
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+/* end our-work*/
+/* start stuff */
+.stuff .discription {
+  max-width: 500px;
+}
+/* end stuff */
+/* start team  */
+.team {
+  background-color: var(--section-color);
+}
+.team h2 {
+  color: var(--yellow-color);
+}
+.team .row h4 {
+  background-color: var(--green-color);
+}
+.project {
+  background-color: var(--dark-color);
+}
+/* end team  */
+/* satrt subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe input[type="text"]::placeholder {
+  color: white;
+  font-weight: bold;
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+.subscribe input[type="submit"] {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+/* end subscribe */
+/* satrt footer */
+.footer {
+  background-color: var(--dark-color);
+}
+.footer .copyright > span {
+  color: var(--green-color);
+}
+.footer .copyright div span {
+  color: var(--yellow-color);
+}
+.footer .social ul svg {
+  width: 20px;
+  height: 20px;
+}
+.footer .social .facebook {
+  background-color: #1877f2;
+}
+.footer .social .twitter {
+  background-color: #1da1f2;
+}
+.footer .social .linkedin {
+  background-color: #0077b5;
+}
+.footer .social .youtube {
+  background-color: #ff0000;
+}
+/* end footer */
